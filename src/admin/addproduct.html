@@ -1,0 +1,37 @@
+<div>
+    <h3 class="text-center">Add Product</h3>
+    <form name="addform" novalidate  class="form-horizontal">
+        <div class="form-group">
+            <label for="productname" class="col-sm-2 control-label">Product Name:</label>
+            <div class="col-sm-10">
+                <input  class="form-control" name="productname" id="productname" placeholder="Product Name..."
+                        ng-model="product.name"
+                        required/>
+                <span ng-show="addform.productname.$dirty && addform.productname.$invalid">Productname required!.</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="cost" class="col-sm-2 control-label">Product Cost</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="cost" id="cost" placeholder="Enter Cost.."
+                       ng-model="product.cost" required/>
+                <span ng-show="addform.cost.$dirty && addform.cost.$invalid">Cost required!.</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="decription" class="col-sm-2 control-label">Description</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="decription" id="decription" placeholder="Enter Cost.."
+                       ng-model="product.desc" required/>
+                <span ng-show="addform.decription.$dirty && addform.decription.$invalid">Desc required!.</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button class="btn btn-primary" ng-click="addProduct()" ng-disabled="loginform.$invalid">Add</button>
+                <button class="btn btn-primary" ng-click="cancel()" >Cancel
+                    in</button>
+            </div>
+        </div>
+    </form>
+</div>

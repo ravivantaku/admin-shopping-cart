@@ -1,0 +1,23 @@
+<section>
+    <h3 class="text-center">Products</h3>
+    <a ui-sref="admin/addproduct" class="btn btn-primary">Add Product</a>
+    <div class="pull-right">Total Products: {{totalProducts}}</div>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Cost</th>
+            <th>Product Desc</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="product in products">
+            <td> {{product.name}}</td>
+            <td> {{product.cost}}</td>
+            <td> {{product.desc}}</td>
+            <td><a href="#/admin/edit/{{product.id}}" class="btn btn-primary">Edit</a></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
